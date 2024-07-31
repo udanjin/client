@@ -33,7 +33,7 @@ const Menus = () => {
   };
   useEffect(() => {
     const fetchMenu = async () => {
-      const res = await fetch("http://localhost:4000/api/menu");
+      const res = await fetch("https://pos-app-api-five.vercel.app/api/menu");
       const json = await res.json();
       console.log(res);
       if (res.ok) {
