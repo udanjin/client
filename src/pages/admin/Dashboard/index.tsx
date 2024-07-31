@@ -10,7 +10,7 @@ interface SeriesData {
   y: number;
 }
 
-const index = () => {
+const Index = () => {
   const [timePeriod, setTimePeriod] = useState("last7days");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [chartCategories, setChartCategories] = useState<string[]>([]);
@@ -199,4 +199,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

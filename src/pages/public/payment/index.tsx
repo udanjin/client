@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axiosInstance from "../../../axiosConfig";
 
-const index = () => {
+const Index = () => {
   const { id } = useParams();
   
   useEffect(() => {
@@ -63,4 +63,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

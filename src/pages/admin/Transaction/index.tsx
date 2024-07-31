@@ -7,7 +7,7 @@ import Pagination from "../../../Components/Pagination";
 
 
 
-const index = () => {
+const Index = () => {
   const [transaction, setTransaction] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
@@ -135,4 +135,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

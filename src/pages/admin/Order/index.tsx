@@ -17,7 +17,7 @@ interface order {
   orderItems?: orderItems[];
 }
 
-const index = () => {
+const Index = () => {
   const [orders, setOrders] = useState([]);
   const [order, setOrder] = useState<order | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -168,7 +168,7 @@ const index = () => {
                       {paginatedTransactions.map((item: any) => (
                         <tbody className="bg-white  divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
                           {/* {{< products.inline >}}
-                            {{- Range (index $.Site.Data "products") }} */}
+                            {{- Range (index I.Site.Data "products") }} */}
                           <tr className="hover:bg-gray-100 dark:hover:bg-gray-700">
                             <td className="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
                               {item._id}
@@ -414,4 +414,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import Menus from "../../../Components/Menus";
 import TopNavbar from "../../../Components/TopNavbar";
 import { useEffect } from "react";
-const index = () => {
+
+const Index = () => {
   const { tableId } = useParams();
 
   useEffect(() => {
@@ -19,4 +20,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

@@ -13,7 +13,7 @@ interface OrderItems {
   tax: Number;
 }
 
-const index = () => {
+const Index = () => {
   const [orders, setOrders] = useState<CartItem[]>([]);
   const tableId = localStorage.getItem("tableId");
 
@@ -162,4 +162,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

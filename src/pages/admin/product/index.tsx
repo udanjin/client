@@ -13,7 +13,7 @@ interface MenuDetails {
   imgPath: string;
 }
 
-const index = () => {
+const Index = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
   const [isUpdateOpen, setIsUpdateOpen] = useState(false);
@@ -754,4 +754,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
