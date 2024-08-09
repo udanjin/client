@@ -133,7 +133,7 @@ const Index = () => {
     console.log(personOrder);
   }, [personOrder]);
 
-  const calculatedAmount = (id: number, type: string): number => {
+   const calculatedAmount = (id: number, type: string): number => {
     if (!bill || productSelectedCount.length === 0) return 0;
 
     const productCountItem = productSelectedCount.find((e) => e.id === id);
@@ -148,15 +148,15 @@ const Index = () => {
     }
 
     if (type === CalculateAmountType.TAX) {
-    amount = orderItem ? (parseFloat(orderItem.price) * 0.1) : 0; // 10% tax rate
-  }
+      amount = orderItem ? orderItem.tax : 0;
+    }
 
-  const totalPrice = amount;
+    const totalPrice = amount / count;
 
     return totalPrice;
   };
 
-  const calculateTax = (orderIds: number[], personCount: number): number => {
+  const calculateTax = (orderIds: number[]): number => {
     if (!bill || productSelectedCount.length === 0) return 0;
 
     const matchingItems = bill.orderItems.filter((item) =>
@@ -168,7 +168,7 @@ const Index = () => {
       totalTax += calculatedAmount(e.id, CalculateAmountType.TAX);
     });
 
-    return totalTax / personCount;
+    return totalTax * 0.1;
   };
 
   const calculateTotalprice = (orderIds: number[]) => {
