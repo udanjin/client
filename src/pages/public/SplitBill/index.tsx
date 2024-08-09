@@ -148,10 +148,10 @@ const Index = () => {
     }
 
     if (type === CalculateAmountType.TAX) {
-      amount = orderItem ? orderItem.tax : 0;
-    }
+    amount = orderItem ? (parseFloat(orderItem.price) * 0.1) : 0; // 10% tax rate
+  }
 
-    const totalPrice = amount / count;
+  const totalPrice = amount * count;
 
     return totalPrice;
   };
@@ -168,7 +168,7 @@ const Index = () => {
       totalTax += calculatedAmount(e.id, CalculateAmountType.TAX);
     });
 
-    return totalTax * 0.1;
+    return totalTax;
   };
 
   const calculateTotalprice = (orderIds: number[]) => {
