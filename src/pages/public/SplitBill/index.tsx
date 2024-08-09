@@ -168,7 +168,7 @@ const Index = () => {
       totalTax += calculatedAmount(e.id, CalculateAmountType.TAX);
     });
 
-    return totalTax * 0.1;
+    return totalTax;
   };
 
   const calculateTotalprice = (orderIds: number[]) => {
