@@ -516,7 +516,7 @@ const Index = () => {
                           className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
                           role="alert"
                         >
-                          <span className="font-medium">Product Added</span>
+                          <span className="font-medium">Product Updated</span>
                         </div>
                       )}
                       {fail && (
@@ -525,7 +525,7 @@ const Index = () => {
                           role="alert"
                         >
                           <span className="font-medium">
-                            Failed to Add Product
+                            Failed to Update Product
                           </span>
                         </div>
                       )}
