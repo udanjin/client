@@ -151,12 +151,12 @@ const Index = () => {
     amount = orderItem ? (parseFloat(orderItem.price) * 0.1) : 0; // 10% tax rate
   }
 
-  const totalPrice = amount * count;
+  const totalPrice = amount;
 
     return totalPrice;
   };
 
-  const calculateTax = (orderIds: number[]): number => {
+  const calculateTax = (orderIds: number[], personCount: number): number => {
     if (!bill || productSelectedCount.length === 0) return 0;
 
     const matchingItems = bill.orderItems.filter((item) =>
@@ -168,7 +168,7 @@ const Index = () => {
       totalTax += calculatedAmount(e.id, CalculateAmountType.TAX);
     });
 
-    return totalTax;
+    return totalTax / personCount;
   };
 
   const calculateTotalprice = (orderIds: number[]) => {
