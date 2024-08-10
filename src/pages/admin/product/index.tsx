@@ -60,7 +60,7 @@ const Index = () => {
 
   useEffect(() => {
     const fetchMenus = async () => {
-      const res = await fetch("https://pos-app-api-five.vercel.app/api/menu");
+      const res = await fetch("https://pos-app-api-five.vercel.app/api/menu/v2");
       const json = await res.json();
       console.log(res);
       if (res.ok) {
