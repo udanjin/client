@@ -60,7 +60,7 @@ const Index = () => {
 
   useEffect(() => {
     const fetchMenus = async () => {
-      const res = await fetch("https://pos-app-api-five.vercel.app/api/menu/v2");
+      const res = await fetch("https://pos-app-api-five.vercel.app/api/menu");
       const json = await res.json();
       console.log(res);
       if (res.ok) {
@@ -94,7 +94,7 @@ const Index = () => {
     formData.append("imgPath", image);
 
     axiosInstance
-      .post("/menu", formData, {
+      .post("/menu/v2", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
