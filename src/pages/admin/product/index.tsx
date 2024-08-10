@@ -127,10 +127,7 @@ const Index = () => {
 
   const handleUpdateProduct = async (e: any) => {
     e.preventDefault();
-    if (!image) {
-      // setStatus("Please select an image to upload");
-      return;
-    }
+  
     if (!selectedMenu) return;
 
     const id = selectedMenu?._id;
