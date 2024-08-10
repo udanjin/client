@@ -29,7 +29,8 @@ const Index = () => {
   const [refresh, setRefresh] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
-
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  
   const handlePageChange = (newPageNumber: number) => {
     setCurrentPage(newPageNumber);
   };
@@ -115,11 +116,11 @@ const Index = () => {
         setName("");
         setDescription("");
         setPrice(null);
-        const fileInput = document.getElementById(
-          "fileInput"
-        ) as HTMLInputElement;
-        fileInput.value = "";
-
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        } else {
+          console.error("fileInput element not found");
+        }
         setImage(undefined);
       });
   };
@@ -353,6 +354,7 @@ const Index = () => {
                         id="file_input"
                         type="file"
                         onChange={handleFileChange}
+                        ref={fileInputRef}
                       />
                     </div>
                     {success && (
