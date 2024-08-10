@@ -94,7 +94,7 @@ const Index = () => {
     formData.append("imgPath", image);
 
     axiosInstance
-      .post("https://pos-app-api-five.vercel.app/api/menu", formData, {
+      .post("/menu", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
